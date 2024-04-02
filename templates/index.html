@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'dist/output.css') }}">
+
+        <title>Encoder des informations sur un portable</title>
+    </head>
+    <body>
+        <h1>Informations</h1>
+        <form method="POST" action="{{ url_for('submit') }}">
+            <p>
+                <label for="GSM">Numéro de GSM :</label>
+                <input type="GSM" id="GSM" name="GSM" required>
+            </p>
+            <p>
+                <label for="Modèle">Modèle de GSM</label>
+                <input type="Modèle" id="Modèle" name="Modèle" required>
+            </p>
+            <p>
+                <label for="Marque">Marque du GSM</label>
+                <input type="Marque" id="Marque" name="Marque" required>
+            </p>
+            <p>
+                <label for="Année">Année de fabrication du GSM</label>
+                <input type="Année" id="Année" name="Année" required>
+            </p>
+            <p>
+                <button type="submit">Encoder</button>
+            </p>
+        </form>
+    </body>
+</html>
